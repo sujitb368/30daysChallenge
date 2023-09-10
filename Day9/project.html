@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div style="height: 100vh;" class="container m-auto pt-5">
+        <div style="width: 600px; height: 500px;" class="col-md-8 p-3 m-auto shadow d-flex flex-column">
+            <div class="col-12">
+                <h1 class="text-uppercase text-center text-success my-1">Task list</h1>
+                <form onsubmit="event.preventDefault();addItem()" class="d-flex justify-content-center col-12">
+                    <div class="form-group col-6 me-2">
+                        <input id="inputItem" type="text" class="form-control" placeholder="Enter item name" />
+                    </div>
+
+                    <button class="btn btn-success col-3">Add</button>
+
+                </form>
+            </div>
+            <div id="notes" class="col-10 pt-5 px-5 h-75 ms-auto me-auto overflow-auto">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const items = []
+
+
+
+        const addItem = () => {
+            const inputItem = document.querySelector("#inputItem");
+            items.push(inputItem.value);
+
+            const notes = document.querySelector("#notes");
+
+            notes.innerHTML = "";
+
+            items.forEach((item, index) => {
+                notes.innerHTML += `
+            <div  class="d-flex justify-content-between align-items-center mb-1">
+                <span>${item}</span>
+                <button onclick="deleteItem(${index})" class="btn btn-primary">Delete</button>
+                </div>
+                `;
+            })
+
+            inputItem.value = ""
+
+        }
+
+        const deleteItem = (index) => {
+            const notes = document.querySelector("#notes");
+            items.splice(index, 1);
+
+            notes.innerHTML = "";
+
+            items.forEach((item, index) => {
+                notes.innerHTML += `
+            <div  class="d-flex justify-content-between align-items-center mb-1">
+                <span>${item}</span>
+                <button onclick="deleteItem(${index})" class="btn btn-primary">Delete</button>
+                </div>
+                `;
+            })
+        }
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
