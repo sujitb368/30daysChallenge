@@ -9,10 +9,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: aliceblue;">
 
     <div style="height: 100vh;" class="container m-auto pt-5">
-        <div style="width: 600px; height: 500px;" class="col-md-8 p-3 m-auto shadow d-flex flex-column">
+        <div style="width: 600px; height: 500px;"
+            class="col-md-8 bg-white rounded p-3 m-auto shadow d-flex flex-column">
             <div class="col-12">
                 <h1 class="text-uppercase text-center text-success my-1">Task list</h1>
                 <form onsubmit="event.preventDefault();addItem()" class="d-flex justify-content-center col-12">
@@ -24,7 +25,7 @@
 
                 </form>
             </div>
-            <div id="notes" class="col-10 pt-5 px-5 h-75 ms-auto me-auto overflow-auto">
+            <div id="notes" class="col-10 pt-5 px-5 h-75 ms-auto me-auto overflow-auto ">
 
             </div>
         </div>
