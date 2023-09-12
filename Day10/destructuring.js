@@ -13,8 +13,14 @@ console.log(a1, b1, rest1); //10, 30, [40,50,60]
 const [a2, b2, ...[c, d]] = array;
 console.log(a2, b2, c, d); // 10,20, 30,40
 
+const colors = ["red", "green", "blue"];
+const [firstColor, secondColor, thirdColor] = colors;
+
+console.log(firstColor);  // "red"
+console.log(secondColor); // "green"
+console.log(thirdColor);  // "blue"
+
 // object destructuring
 const person = { aa: 1, bb: 2, cc: 3, dd: 4, ee: 5 };
 const { aa, bb } = person;
-
 console.log(aa, bb); // 1, 2
