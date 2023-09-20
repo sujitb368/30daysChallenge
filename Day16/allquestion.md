@@ -10,12 +10,12 @@
 
 // declare a function using async keyword
 
-- async function fetchData() {
+````- async function fetchData() {
   // await keyword to pause the execution until the Promise is resolved
   const data = await fetch('https://example.com/data');
   // code here executes after the Promise is resolved
   return data;
-  }
+  }```
 
 ### Promises:
 
@@ -32,7 +32,7 @@
 
 const myPromise = new Promise((resolve, reject) => {
 
-// time taking operation
+```// time taking operation
 setTimeout(() => {
 const randomNumber = Math.random();
 if (randomNumber < 0.5) {
@@ -51,7 +51,7 @@ console.log('Promise fulfilled with value:', resolvedValue);
 })
 .catch((error) => {
 console.error('Promise rejected with error:', error);
-});
+});```
 
 ### .then .catch :
 
@@ -85,3 +85,4 @@ promise.catch(error => {
 // This function will be called if the promise is rejected.
 console.log(error); // 'promise was rejected'
 });
+````
