@@ -71,7 +71,9 @@ console.error('Promise rejected with error:', error);
 - The .catch() method is used to add a function that will be called only if the promise is rejected.
   The function will receive the promise's error as an argument.
 
-Example:
+- Example:
+
+```
 const promise = new Promise((resolve, reject) => {
 // Do something asynchronous here...
 resolve('promise was fulfilled');
@@ -88,7 +90,4 @@ promise.catch(error => {
 // This function will be called if the promise is rejected.
 console.log(error); // 'promise was rejected'
 });
-
-```
-
 ```
