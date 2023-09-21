@@ -86,12 +86,11 @@ display`${greetings} my name is ${name} and I am ${age}`;
    for (const key in person) {
      console.log(`${key}: ${person[key]}`);
    }
+   This loop will print each property and its value in the `person` object.
    //name: John
    //age: 30
    //city: New York
    ```
-
-   This loop will print each property and its value in the `person` object.
 
 3. **for...of Loop:**
    The `for...of` loop is specifically designed for iterating over iterable objects, such as arrays and strings.
